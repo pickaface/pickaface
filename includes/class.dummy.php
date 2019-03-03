@@ -13,7 +13,7 @@ class Dummy extends Setter{
   ///////////////////////setters behind this line///////////////////////
   protected function _set_dummy1($value){
     try {
-      $dummy = $this->validate_sanitize_string($value);
+      $dummy = $this->_validate_sanitize_string($value);
       $this->_attributes["dummy1"] = $dummy;
     } catch (Exception $e) {
       throw $e;
@@ -22,7 +22,7 @@ class Dummy extends Setter{
 
   protected function _set_dummy2($value){
     try {
-      $dummy = $this->validate_sanitize_string($value);
+      $dummy = $this->_validate_sanitize_string($value);
       $this->_attributes["dummy2"] = $dummy;
     } catch (Exception $e) {
       throw $e;

@@ -1,47 +1,86 @@
 <?php
+/**
+ *
+ */
+class Game extends Setter{
+  protected $_attributes = array(
+    'id'=> 0,
+    'category' => "nocategory",
+    'game_name' => "NGN",
+    'game_description' => "NGD",
+    'game_rules' => "NGR",
+    'min_players' => 2,
+    'max_players' => 6,
+    'age_limit' => 4,
+    );
+  protected $_table = "games";
 
-// Profile -
-// Id
-// Name
-// Logo
-// Photo
-// Choose Player (options among different pick and nick)
-//
-// Settings -
-// Language
-// Sound/Mute
-// Game level (Easy/Medium/Hard)
-//
-//
-// About -
-// Catogory
-// Instruction
-// Description
-// Rating
-//
-// Profile -
-// Number of players(Single, Multiplayer(Local, Online, Group), Play with Computer)
-// Buy a points to achieve level (Bidding)
-// Register (to Keep your score)
-// guest player
-// No. of plays (today)
-// Max point scored by you
-// Highest score
-//
-//
-// Other attributer-
-// Related games
-// Tags (Eg #war, #fight, #Action #Shooting)
-// Share
-// Option (mobile/Desktop/Both)
-// Download game
-// Restriction(Age info)
-// Author
-//
-//
-// Screen size
-// Did you like this Game?
-// Review/Feed back
+  function __construct($_attributes){
+    parent::__construct($_attributes);
+  }
+
+  ///////////////////////setters behind this line///////////////////////
+  protected function _set_category($value){
+    global  $_list_category;
+    $array_name = $_list_category;
+    try {
+      $this->_attributes["category"] = $this->_validate_array_member($value, $array_name);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
+
+  protected function _set_game_name($value){
+    try {
+      $this->_attributes["game_name"] = $this->_validate_sanitize_string($value);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
+
+  protected function _set_game_description($value){
+    try {
+      $this->_attributes["game_description"] = $this->_validate_sanitize_string($value);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
+
+  protected function _set_game_rules($value){
+    try {
+      $this->_attributes["game_rules"] = $this->_validate_string($value);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
+
+  protected function _set_min_players($value){
+    try {
+      $this->_attributes["min_players"] = $this->_validate_sanitize_int($value);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
+
+  protected function _set_max_players($value){
+    try {
+      $this->_attributes["max_players"] = $this->_validate_sanitize_int($value);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
+
+  protected function _set_age_limit($value){
+    try {
+      $this->_attributes["age_limit"] = $this->_validate_sanitize_int($value);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
 
 
- ?>
+}
+
+
+
+?>

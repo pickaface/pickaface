@@ -1,5 +1,5 @@
 <?php
-
+$_list_category = ["nocategory", "classic", "puzzle", "race", "action"];
 
 function isMobileDevice(){
     $aMobileUA = array(

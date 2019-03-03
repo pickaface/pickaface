@@ -13,27 +13,6 @@ abstract class DBobject{
     }
   }
 
-  public function __get($attribute){
-    if(key_exists($attribute, $this->_attributes)){
-      return $this->_attributes[$attribute];
-    }else{
-      throw new Exception("No such attribute: ".$attribute);
-    }
-  }
-
-  public function __set($attribute, $value){
-    if(key_exists($attribute, $this->_attributes)){
-      $function = "_set_".$attribute;
-      try {
-        $this->$function($value);
-        return $this;
-      } catch (Exception $e) {
-        throw $e;
-      }
-    }else{
-      throw new Exception("No such attribute: ". $attribute);
-    }
-  }
 
   public function get_all_attributes(){
     return $this->_attributes;

@@ -8,21 +8,21 @@
                     <li><a href='#'>Shows</a></li>
                     <li><a href='#'>Apps</a></li>
                 </ul>
-        
+
                 <ul>
                     <li>FACE</li>
                     <li><a href='#'>Find a Game</a></li>
                     <li><a href='#'>Today at Face</a></li>
                     <li><a href='#'>Summer Camp</a></li>
                 </ul>
-        
+
                 <ul>
                     <li>CONTACT</li>
                     <li><a href='#'>About PickAFace</a></li>
                     <li><a href='#'>Contact Us</a></li>
                     <li><a href='#'>Jobs</a></li>
                 </ul>
-        
+
                 <ul>
                     <li>DOWNLOAD</li>
                     <li><a href='#'>Resume</a></li>
@@ -46,9 +46,10 @@
       </footer>
 
       <?php if(isset($alert_message)){ echo "<script>alert('" . $alert_message . "')</script>"; } ?>
-      <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."navbar.js";?>></script>
+      <!-- <script type="text/javascript" src=<?php //echo "..".DS."javascript".DS."navbar.js";?>></script> -->
+      <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pafanpopup.js";?>></script>
     </div><!-- container end -->
-      
+
     <!-- dropdown toggle -->
     <script type="text/javascript">
         $(document).ready(function() {

@@ -44,6 +44,12 @@
     <div class="container">
       <!-- navigation -->
       <div class="wrapper">
+        <div id="overlay">
+
+        </div>
+        <div id="popup-contents">
+          
+        </div>
           <header>
               <nav>
                   <div class="toggle"><i class="fas fa-bars"></i></div>

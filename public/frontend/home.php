@@ -2,13 +2,13 @@
     defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
     require_once '..' .DS. 'layouts' .DS. 'head.php';
 ?>
-    
+
     <!-- showcase -->
     <section class="top-container">
         <div class="showcase">
             <h1>Pick Face Nick Game</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ab distinctio cupiditate corporis, asperiores maxime!</p>
-            <a href="#" class="btn">Play</a>
+            <a href="#" class="btn">To Play please click to pick a face and nick</a>
         </div>
 
         <!-- top box -->

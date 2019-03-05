@@ -1,0 +1,506 @@
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+body{
+  background-color: var(--light-color);
+  border: 0.5px solid var(--darkest-color);
+}
+button:focus{
+  outline:0;
+}
+/*  */
+nav{
+  background: var(--darkest-color);
+  padding: var(--sz0050);
+  padding-top: var(--sz0075);
+}
+header nav{
+  background: var(--lighter-color);
+}
+
+header nav:hover{
+  background: var(--darkest-color);
+}
+
+header nav a:first-of-type{
+  width: 47%;
+  text-align: left;
+  /* padding-left: 5%; */
+  margin-left: 0.5%;
+  font-size: var(--sz0200);
+  padding-bottom: 0;
+}
+nav a{
+  font-size: var(--sz0150);
+  display: inline-block;
+  width: 10%;
+  text-decoration: none;
+  text-align: right;
+  text-transform: capitalize;
+  color: var(--contrast-color);
+  padding-bottom: 0.5%;
+  padding-right: 0.5%;
+}
+nav a:hover{
+  font-weight: 700;
+}
+#navbar-img{
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 10%;
+  /* border-radius: 100%; */
+  /* margin-bottom: -0.5%; */
+}
+#navbar-img-1, .navbar-img-1-div h2{
+  display: none;
+}
+.thisPage{
+  color: white;
+  font-weight: 700;
+}
+
+#h2-on-img{
+  position: absolute;
+  bottom: 1em;
+  left: 0.5em;
+  background-color: transparent;
+  font-size: var(--sz0800);
+}
+
+
+#demand-a-class-h2 h2{
+  position: absolute;
+  z-index: 200;
+  bottom: 3em;
+  left: 0.5em;
+  background-color: transparent;
+  font-size: var(--sz0300);
+  text-transform: none;
+}
+
+#demand-a-class-h2 p{
+  position: absolute;
+  z-index: 200;
+  bottom: 4.0em;
+  left: 2em;
+  background-color: transparent;
+  font-size: var(--sz0150);
+  color: white;
+}
+
+
+@media screen and (max-width: 1000px){
+  header{
+    position: relative;
+  }
+  header nav{
+    /* width: 80%; */
+    position: absolute;
+    display: none;
+    z-index: 300;
+  }
+  header nav a{
+    display: block;
+    width: 60%;
+    text-align: left;
+    font-size: var(--sz0300);
+    margin: 5px;
+  }
+
+  header nav a:first-of-type{
+    display: block;
+    width: 60%;
+    text-align: left;
+    font-size: var(--sz0300);
+    margin: 5px;
+  }
+  #navbar-img{
+    display: none;
+  }
+  .navbar-img-1-div{
+    background: var(--darkest-color);
+    display: flex;
+  }
+
+  #navbar-img-1{
+    display: inline-block;
+    width: 4%;
+    border-radius: 100%;
+    margin: 1%;
+    z-index: 0;
+  }
+
+  .navbar-img-1-div h2{
+    display: inline-block;
+    width: 88%;
+    margin-top: auto;
+    text-transform: capitalize;
+  }
+
+}
+
+body>header{
+  width: 100%;
+  border: 1px solid var(--darkest-color);
+  padding: 5px;
+  font-size: 0;
+  position: relative;
+}
+header img{
+  width: 100%;
+  display: inline-block;
+  opacity: 0.9;
+  z-index: -1;
+  transition: opacity 0.5s ease-out;
+  padding-bottom: 5px;
+}
+header h2{
+  font-size: var(--sz0200);
+  text-align: center;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  background: var(--darkest-color);
+  color: white;
+  margin: 0;
+  margin-top: 0.75%;
+  padding: var(--sz0100);
+}
+
+.header-like{
+  padding: 5px;
+  border: 1px solid var(--darkest-color);
+}
+
+.header-like h2{
+  font-size: var(--sz0200);
+  text-align: center;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  background: var(--darkest-color);
+  color: white;
+  margin: 0;
+  margin-top: 0.75%;
+  padding: var(--sz0100);
+}
+
+header h3{
+  font-size: var(--sz0125);
+  text-align: center;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  color: var(--darkest-color);
+  margin: 0;
+  margin-top: 0.75%;
+  padding: var(--sz0050);
+}
+/*  */
+@supports (grid-area: auto){
+
+}
+.img-div{
+  background-color: var(--light-color);
+  position: relative;
+  top: var(--sz0045);
+}
+.button-class{
+  width: 30%;
+  height: 100%;
+  border: none;
+  font-size: var(--sz0800);
+  z-index: 10;
+  background: none;
+  color: var(--darkest-color);
+}
+.left-arrow:hover{
+  background-image: linear-gradient(to left, rgba(var(--color),0), rgba(var(--color),0.5));
+}
+
+.right-arrow:hover{
+  background-image: linear-gradient(to right, rgba(var(--color),0), rgba(var(--color),0.5));
+}
+
+.left-arrow:active{
+  background-image: linear-gradient(to left, rgba(var(--color),0), rgba(var(--color),0.7));
+  font-size: var(--sz1000);
+}
+.right-arrow:active{
+  background-image: linear-gradient(to right, rgba(var(--color),0), rgba(var(--color),0.7));
+  font-size: var(--sz1000);
+}
+.left-arrow{
+  text-align: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.right-arrow{
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.main-article h1, #end-h1{
+  /* display: none; */
+  text-align: center;
+  text-transform: capitalize;
+  font-size: var(--sz0300);
+}
+.main-article h1::before{
+  /* color: #ccc; */
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+#end-h1:after{
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.5em;
+}
+
+.main-article p{
+  width: 90%;
+  padding-top: var(--sz0200);
+  padding-bottom: var(--sz0100);
+  margin: auto;
+  font-size: var(--sz0200);
+  text-align: justify;
+  /* font-family: fantasy; */
+  /* font-style: italic; */
+  color: var(--font-color);
+  position: relative;
+}
+.video-div{
+  font-size: 0;
+  width: 80%;
+  border: 1px solid var(--font-color);
+  padding: var(--sz0100);
+  margin: 0 auto 5px;
+}
+video{
+  width: 100%;
+}
+.main-article>p:first-of-type{
+  font-size: var(--sz0250);
+  line-height: 150%;
+  padding-bottom: 0;
+}
+#my-video{
+  font-size: 150%;
+  line-height: 100%;
+  padding-top: 0;
+}
+p a{
+  color: inherit;
+}
+.textpart p{
+  font-size: 0;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+.main-article button{
+  background: none;
+  font-family: fantasy;
+  font-style: italic;
+  color: var(--font-color);
+  border: none;
+  font-size: var(--sz0200);
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+body>footer{
+  background: var(--darkest-color);
+  padding: var(--sz0050);
+  padding-top: var(--sz0075);
+}
+
+.footer-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.footer-div{
+  padding-left: 5%;
+  /* border: 1px solid white; */
+}
+
+.footer-div:last-of-type{
+  padding-left: 0;
+}
+
+.footer-div:last-of-type{
+  padding-right: 5%;
+}
+
+.footer-div:nth-of-type(2n){
+  padding-left: 5%;
+  text-align: center;
+  padding-left: 0;
+}
+
+.footer-div dl{
+  margin: 0;
+  margin-top: 1%;
+}
+
+.footer-div dt{
+  font-size: var(--sz0150);
+  text-transform: uppercase;
+  color: white;
+}
+
+.footer-div dd{
+  margin-left: 0;
+  font-size: var(--sz0125);
+  line-height: var(--sz0150);
+}
+
+.footer-div:nth-of-type(3n) dd{
+  margin-right: 0;
+}
+
+
+.footer-div dd a{
+  text-decoration: none;
+  color: white;
+}
+
+.header-links-in-footer{
+  font-size: 0;
+}
+
+.header-links-in-footer a{
+  font-size: var(--sz0100);
+  display: inline-block;
+  width: 16.5%;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-top: var(--sz0100);
+}
+
+.header-links-in-footer a:hover{
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.copy-right{
+  font-size: var(--sz0050);
+  text-align: center;
+  color: white;
+  /* margin-left: 2%; */
+  /* margin-top: var(--sz0100); */
+}
+
+.social-div{
+  display: grid;
+  grid-template-columns: auto auto;
+  position: relative;
+}
+
+.share-buttons img{
+  width: 10%;
+}
+
+.share-buttons dd{
+  font-size: var(--sz0125);
+  /* text-align: center; */
+  color: white;
+}
+/*The following code part copied from https://help.surveygizmo.com/help/icons its not working to  */
+/* change the color of the selected radio button */
+/* .sg-replace-icons input[type=radio]:checked + label:before,
+.sg-replace-icons input[type=radio]:checked + label span.sg-icon-target:before,
+.sg-replace-icons input[type=checkbox].sg-input-checkbox:checked + label:before,
+.sg-replace-icons input[type=checkbox].sg-input-checkbox:checked + label span.sg-icon-target:before
+{
+ color:#F06586;
+} */
+/* End copied code */
+
+
+/* Overlay and Alertbox style */
+
+#overlay{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: lightgrey;
+  opacity: 0.8;
+  z-index: 1000;
+}
+#dialog_head{
+  display: flex;
+  min-height: 8vw;
+  width: 100%;
+  background: rgba(214, 173, 57, 1.0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: var(--darkest-color);
+}
+#dialogbox{
+  display: none;
+  position: absolute;
+  width: 50%;
+  z-index: 2000;
+  border: 1px solid rgba(214, 173, 57, 1.0);
+  border-radius: 10px;
+  background: white;
+}
+/* Body is where the ok button is placed */
+#dialog_body{
+  display: flex;
+  height: 7vw;
+  width: 100%;
+}
+#dialog_head p{
+  margin: auto;
+  font-size: var(--sz0200);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+#dialog_body button{
+  margin: auto;
+  height: 5vw;
+  width: 30%;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid rgba(214, 173, 57, 1.0);
+  border: 1px solid var(--darkest-color);
+  color: var(--darkest-color);
+  font-size: var(--sz0200);
+}
+
+#dialog_body button:hover{
+  background-color: var(--hover-color);
+}
+/* End Overlay and Alertbox style */
+
+.top-grid{
+  position: relative;
+}
+.top-mini-overlay{
+  position: absolute;
+  top: 0;
+  min-height: 13vw;
+  left: 0;
+  right: 0;
+  /* background: rgba(213, 173, 57, 0.5); */
+  z-index: 10;
+}

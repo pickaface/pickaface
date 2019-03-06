@@ -6,7 +6,7 @@
     var width = window.innerWidth;
     var overlay = document.getElementById('overlay');
     var dialogbox = document.getElementById('popup-contents');
-    dialogbox.innerHTML =  '<div><div id="dialog_head"></div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div>';
+    overlay.innerHTML =  '<div><div id="dialog_head"></div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div>';
     var dialogboxHead = document.getElementById('dialog_head');
     var scrollPos = window.scrollY;
 

@@ -121,7 +121,7 @@ display: none;
 .top-container {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: 
+  grid-template-areas:
     'showcase showcase top-box-a'
     'showcase showcase top-box-b';
 }
@@ -160,7 +160,7 @@ display: none;
 }
 
 .top-box .pick {
-font-size: 2rem;  /* 框随字撑大 */ 
+font-size: 2rem;  /* 框随字撑大 */
 }
 
 .top-box-a {
@@ -234,7 +234,7 @@ footer .footer-cols ul li {
 padding-bottom: 5px;
 }
 
-footer .footer-cols ul li:first-child { 
+footer .footer-cols ul li:first-child {
 font-size: 1rem;
 padding-bottom: 0.5rem;
 border-bottom: var(--dark) solid 1px;
@@ -319,7 +319,7 @@ nav ul li {
 }
 
 .top-container {
-    grid-template-areas: 
+    grid-template-areas:
         'showcase showcase'
         'top-box-a top-box-b';
 }
@@ -347,7 +347,7 @@ footer .social {
 
 @media(max-width: 500px) {
 .top-container {
-    grid-template-areas: 
+    grid-template-areas:
       'showcase'
       'top-box-a'
       'top-box-b';
@@ -359,3 +359,69 @@ nav ul {
   width: 97.4%;
 }
 }
+
+/* Overlay and Alertbox style */
+
+#overlay{
+  /* display: none; */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  background: lightgrey;
+  opacity: 0.8;
+  z-index: 1000;
+}
+#dialog{
+  width: 50%;
+}
+#dialog_head{
+  display: flex;
+  min-height: 8vw;
+  width: 100%;
+  background: rgba(214, 173, 57, 1.0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: var(--header-color);
+}
+#dialogbox{
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  z-index: 2000;
+  border: 1px solid rgba(214, 173, 57, 1.0);
+  border-radius: 10px;
+  background: white;
+}
+
+/* Body is where the ok button is placed */
+#dialog_body{
+  display: flex;
+  height: 7vw;
+  width: 50%;
+  background-color: pink;
+}
+#dialog_head p{
+  margin: auto;
+  font-size: var(--sz0200);
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+#dialog_body button{
+  margin: auto;
+  height: 5vw;
+  width: 30%;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid rgba(214, 173, 57, 1.0);
+  border: 1px solid var(--header-color);
+  color: var(--header-color);
+  font-size: var(--sz0200);
+}
+
+#dialog_body button:hover{
+  background-color: var(--hover-color);
+}
+/* End Overlay and Alertbox style */

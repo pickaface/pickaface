@@ -46,8 +46,8 @@
       </footer>
 
       <?php if(isset($alert_message)){ echo "<script>alert('" . $alert_message . "')</script>"; } ?>
-      <!-- <script type="text/javascript" src=<?php //echo "..".DS."javascript".DS."navbar.js";?>></script> -->
       <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pafanpopup.js";?>></script>
+      <script src="../javascript/main.js"></script>
     </div><!-- container end -->
 
     <!-- dropdown toggle -->

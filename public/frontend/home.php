@@ -84,13 +84,19 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <span class="closeBtn">&times;</span>
-                        <h4>Tik-Tac-Toe</h4>
+                        <h4>Pick a Face and a Nick</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, similique porro amet ratione tenetur ea maxime possimus veritatis assumenda quisquam illum alias nihil quia, aut tempore enim necessitatibus quo doloremque perspiciatis nam eveniet laudantium blanditiis? Itaque, optio consequatur adipisci harum dolore dignissimos. Quam ipsa sunt qui cum adipisci quaerat atque?</p>
+                        <img src="../assets/vitalimages/male_1.png" height="150" width="100" alt="loading...">
+                        <img src="../assets/vitalimages/female_1.png" height="150" width="100" alt="loading...">
+                        <img src="../assets/vitalimages/male_2.png" height="150" width="100" alt="loading...">
+                        <img src="../assets/vitalimages/female_2.png" height="150" width="100" alt="loading...">
                     </div>
                     <div class="modal-footer">
-                        <h4>Let's Play</h4>
+                        <a href="#" class="btn">Aurangzeb</a>
+                        <a href="#" class="btn">Shweta</a>
+                        <a href="#" class="btn">Phanindra</a>
+                        <a href="#" class="btn">YanJiao</a>
                     </div>
                 </div>
             </div>
@@ -99,18 +105,56 @@
 
     <!-- portfolio -->
     <section class="portfolio">
-        <img src="https://source.unsplash.com/random/200x200" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x201" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x202" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x203" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x204" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x205" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x206" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x207" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x208" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x209" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x210" alt="loading...">
-        <img src="https://source.unsplash.com/random/200x211" alt="loading...">
+        <div id="filter" class="filter-container">
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x200" alt="loading...">
+                <a class="game-category" href="#">Action</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x201" alt="loading...">
+                <a class="game-category" href="#">Race</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x202" alt="loading...">
+                <a class="game-category" href="#">Puzzle</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x203" alt="loading...">
+                <a class="game-category" href="#">Race</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x204" alt="loading...">
+                <a class="game-category" href="#">Action</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x205" alt="loading...">
+                <a class="game-category" href="#">Puzzle</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x206" alt="loading...">
+                <a class="game-category" href="#">Puzzle</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x207" alt="loading...">
+                <a class="game-category" href="#">Race</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x208" alt="loading...">
+                <a class="game-category" href="#">Action</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x209" alt="loading...">
+                <a class="game-category" href="#">Action</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x210" alt="loading...">
+                <a class="game-category" href="#">Puzzle</a>
+            </div>
+            <div class="filter-item">
+                <img src="https://source.unsplash.com/random/200x211" alt="loading...">
+                <a class="game-category" href="#">Race</a>
+            </div>
+        </div>
     </section>
 
     <!-- footer -->

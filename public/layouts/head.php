@@ -27,7 +27,6 @@
     <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."user.png";?> type="image/x-icon">
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."mediaflex.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."master.css";?>>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pickalert.js";?>></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,11 +45,13 @@
       <!-- navigation -->
       <div class="wrapper">
         <div id="overlay">
-          <div id="dialog"><div id="dialog_head">Testing</div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div>
-        </div>
-        <div id="popup-contents">
 
         </div>
+        
+        <div id="popup-content">
+          
+        </div>
+
           <header>
               <nav>
                   <div class="toggle"><i class="fas fa-bars"></i></div>
@@ -60,10 +61,10 @@
                   </div>
                   <div class="user">
                       <ul>
-                          <input type="text" name="search" placeholder="Search">
+                          <input id="filterInput" type="text" placeholder="Search">
                           <i class="fas fa-search"></i>
                           <li><a href="#">Welcome, JiaoYan</a></li>
-                          <li><a href="signin.php">SignOut</a></li>
+                          <li><a href="signin.php">SignIn</a></li>
                       </ul>
                   </div>
               </nav>

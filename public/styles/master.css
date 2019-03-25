@@ -71,7 +71,7 @@ color: var(--dark);
   color: var(--dark);
   float: right;
   font-size: 20px;
-  cursor: pointer; 
+  cursor: pointer; /* 变手指 */
 }
 
 .closeBtn:hover, .closeBtn:focus {
@@ -80,16 +80,26 @@ color: var(--dark);
 
 .modal-header, .modal-footer {
   background: var(--golden);
-  padding: 10px 20px;
   color: var(--primary);
 }
 
-.modal-body {
+.modal-body, .modal-footer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.modal-header, .modal-body {
   padding: 10px 20px;
 }
 
-.modal-header h4, .modal-footer h4 {
+.modal-header h4 {
   margin: 0;
+}
+
+.modal-footer .btn:hover {
+  color: var(--dark);
+  background: var(--golden);
 }
 
 /* nav-mini */
@@ -292,15 +302,21 @@ text-align: center;
 }
 
 /* portfolio */
-.portfolio {
+/* .portfolio { */
+.filter-container {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.portfolio img {
+/* .portfolio img { */
+.filter-item img {
   width: 100%;
   box-shadow: var(--shadow);
+}
+
+.filter-item a {
+  display: none;
 }
 
 /* footer */

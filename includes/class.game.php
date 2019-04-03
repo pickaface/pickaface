@@ -12,6 +12,7 @@ class Game extends Setter{
     'min_players' => 2,
     'max_players' => 6,
     'age_limit' => 4,
+    'comment' => "NC"
     );
   protected $_table = "games";
 
@@ -73,6 +74,14 @@ class Game extends Setter{
   protected function _set_age_limit($value){
     try {
       $this->_attributes["age_limit"] = $this->_validate_sanitize_int($value);
+    } catch (Exception $e) {
+      throw $e;
+    }
+  }
+
+  protected function _set_game_comment($value){
+    try {
+      $this->_attributes["comment"] = $this->_validate_sanitize_string($value);
     } catch (Exception $e) {
       throw $e;
     }

@@ -6,8 +6,8 @@
     var width = window.innerWidth;
     var overlay = document.getElementById('overlay');
     var dialogbox = document.getElementById('popup-contents');
-    overlay.innerHTML =  '<div><div id="dialog_head"></div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div>';
-    var dialogboxHead = document.getElementById('dialog_head');
+    // dialogbox.innerHTML =  '<div><div id="dialog_head"></div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div>';
+    // var dialogboxHead = document.getElementById('dialog_head');
     var scrollPos = window.scrollY;
 
     overlay.style.height = height + "px";
@@ -16,7 +16,7 @@
 
     dialogbox.style.display = "block";
 
-    dialogboxHead.innerHTML = "<p>" + "message" + "</p>";
+    // dialogboxHead.innerHTML = "<p>" + "message" + "</p>";
     dialogbox.style.top = (height - dialogbox.offsetHeight)/2 + scrollPos +"px";
     dialogbox.style.left = width/4 + "px";
 

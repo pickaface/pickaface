@@ -5,7 +5,7 @@ var modalBtn = document.getElementById('modalBtn');
 // get close button
 var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
-// listen for open click 
+// listen for open click
 modalBtn.addEventListener('click', openModal);
 // listen for close click
 closeBtn.addEventListener('click', closeModal);
@@ -73,7 +73,7 @@ arrowRight.addEventListener('click', function(){
     if(current === sliderImages.length - 1){ //3-1=2, index[2], last img
         current = -1;
     }
-    slideRight(); //here goes to -1+1, index[0], first img 
+    slideRight(); //here goes to -1+1, index[0], first img
 });
 
 startSlide();

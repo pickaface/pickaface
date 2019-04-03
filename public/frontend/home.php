@@ -2,7 +2,7 @@
     defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
     require_once '..' .DS. 'layouts' .DS. 'head.php';
 ?>
-    
+
     <!-- showcase -->
     <section class="top-container">
         <div class="showcase">
@@ -87,7 +87,7 @@
                         <h4>Tik-Tac-Toe</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, similique porro amet ratione tenetur ea maxime possimus veritatis assumenda quisquam illum alias nihil quia, aut tempore enim necessitatibus quo doloremque perspiciatis nam eveniet laudantium blanditiis? Itaque, optio consequatur adipisci harum dolore dignissimos. Quam ipsa sunt qui cum adipisci quaerat atque?</p>
+                        <p> Minus, similique porro amet ratione tenetur ea maxime possimus veritatis assumenda quisquam illum alias nihil quia, aut tempore enim necessitatibus quo doloremque perspiciatis nam eveniet laudantium blanditiis? Itaque, optio consequatur adipisci harum dolore dignissimos. Quam ipsa sunt qui cum adipisci quaerat atque?</p>
                     </div>
                     <div class="modal-footer">
                         <h4>Let's Play</h4>

@@ -17,6 +17,59 @@
 
  require_once 'navbar.php';
 ?>
+     <!-- Code for type of Signin -->
+
+<?php
+
+if(isset($_POST['submit'])){
+
+  $email=$_POST['email'];
+  $username=$_POST['username'];
+  $password=$_POST['password'];
+  $type=$_POST['type'];
+
+  // verify_email_and_instantiate($email);
+  // User::verify_password_and_instantiate($password);
+
+  // $con=mysqli_connect("localhost","pafanuser",$db_password,"pafandb");
+  // $query="SELECT * FROM login WHERE username='$username' AND password='$password' AND type='$type'";
+  //
+  // $result=mysqli_query($con, $query);
+  //
+  // while ($row=mysqli_fetch_assoc($result)) {
+  //     // var_dump($row);
+  //     // exit();
+  //     if($row['username']==$username && $row['password']==$password && $row['type']=='Admin'){
+  //         // echo '..'.DS."admin".DS."admin.php";
+  //          header("Location: ../admin/admin.php");
+  //   }elseif ($row['username']==$username && $row['password']==$password && $row['type']=='User') {
+  //         echo '..'.DS."frontend".DS."home.php";
+
+  //   }
+  // }
+  //
+  // }
+
+
+  $query = "SELECT * FROM login WHERE username='$username' AND password='$password' AND type='$type'";
+  $result = $db->my_query($query);
+  $row = $result->fetch(PDO::FETCH_ASSOC);
+  $count = 0;
+  while ($row) {
+      $count++;
+      if($row['username']==$username && $row['password']==$password && $row['type']=='Admin'){
+          // echo '..'.DS."admin".DS."admin.php";
+          header("Location: ../admin/admin.php");
+          echo $count;
+          }elseif ($row['username']==$username && $row['password']==$password && $row['type']=='User') {
+                  // echo '..'.DS."frontend".DS."home.php";
+                  header("Location: ../frontend/home.php");
+
+                }
+              }
+        }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -27,11 +80,9 @@
     <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."user.png";?> type="image/x-icon">
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."mediaflex.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."master.css";?>>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pickalert.js";?>></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131410677-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131410677-1"></script> -->
     <script>
       // window.dataLayer = window.dataLayer || [];
       // function gtag(){dataLayer.push(arguments);}
@@ -45,12 +96,9 @@
     <div class="container">
       <!-- navigation -->
       <div class="wrapper">
-        <div id="overlay">
-          <div id="dialog"><div id="dialog_head">Testing</div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div>
-        </div>
-        <div id="popup-contents">
 
-        </div>
+          <!-- <div id="dialog"><div id="dialog_head">Testing</div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div> -->
+
           <header>
               <nav>
                   <div class="toggle"><i class="fas fa-bars"></i></div>
@@ -62,8 +110,33 @@
                       <ul>
                           <input type="text" name="search" placeholder="Search">
                           <i class="fas fa-search"></i>
-                          <li><a href="#">Welcome, JiaoYan</a></li>
-                          <li><a href="signin.php">SignOut</a></li>
+                          <li>
+                            <input type="button" id="signinModalBtn" href="#" value="Signin" />
+                          </li>
+                          <div id="signinModal" class="signinmodal">
+                            <div class="signinmodal-content">
+                                <div class="signinmodal-header">
+                                    <h4>PickAFace Signin Form</h4>
+                                </div>
+                                <div class="signinmodal-body">
+                                    <form method="POST" >
+                                      <input type="email" name="email" placeholder="Email" required id="email"><br><br>
+                                      <input type="username" name="username" id="username" required placeholder="nickname.."><br><br>
+                                      <input type="password" name="password" id="password" placeholder="Password" required><br><br>
+                                      <p>
+                                          <select id = "mytype" name="type">
+                                            <option value = "User">User</option>
+                                            <option value = "Admin">Admin</option>
+                                          </select>
+                                       </p>
+                                      <!-- <input type="number" name="admin_signin_pin" placeholder="PIN" required><br><br> -->
+                                      <button type="submit" name="submit"  class="signup-button" onclick="change()">Signin</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                          <li><a href="#">SignOut</a></li>
+
                       </ul>
                   </div>
               </nav>
@@ -86,5 +159,8 @@
                 </nav>
               </div>
             <?php } ?>
+
+
+
         </header>
       </div> -->

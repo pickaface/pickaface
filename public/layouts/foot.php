@@ -48,6 +48,7 @@
       <?php if(isset($alert_message)){ echo "<script>alert('" . $alert_message . "')</script>"; } ?>
       <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pafanpopup.js";?>></script>
       <script src="../javascript/main.js"></script>
+      <script  src="../javascript/signin.js"></script>
     </div><!-- container end -->
 
     <!-- dropdown toggle -->

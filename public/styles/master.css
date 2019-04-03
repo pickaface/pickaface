@@ -81,15 +81,20 @@ color: var(--dark);
 
 .modal-header, .modal-footer {
   background: var(--golden);
-  padding: 10px 20px;
   color: var(--primary);
 }
 
-.modal-body {
+.modal-body, .modal-footer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.modal-header, .modal-body {
   padding: 10px 20px;
 }
 
-.modal-header h4, .modal-footer h4 {
+.modal-header h4 {
   margin: 0;
 }
 /* Signin popup model*/
@@ -128,6 +133,11 @@ color: var(--dark);
   margin: 0;
 }
 
+
+.modal-footer .btn:hover {
+  color: var(--dark);
+  background: var(--golden);
+}
 
 /* nav-mini */
 header {
@@ -329,17 +339,20 @@ text-align: center;
 }
 
 /* portfolio */
-.portfolio {
+/* .portfolio { */
+.filter-container {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.portfolio img {
+/* .portfolio img { */
+.filter-item img {
   width: 100%;
   box-shadow: var(--shadow);
 }
 
+<<<<<<< HEAD
 /* signinpopup */
 .btnsignin {
   display: none;
@@ -352,6 +365,12 @@ text-align: center;
   overflow: auto;  /* enable scrool bar if needs */
   background-color: rgb(90, 90, 90, 0.5);
 }
+=======
+.filter-item a {
+  display: none;
+}
+
+>>>>>>> 823658afe73b9beec2b6a71dfad5fd2531975862
 /* footer */
 footer {
   background: var(--primary);

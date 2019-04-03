@@ -12,9 +12,3 @@ window.onclick = function (event) {
       modal.style.display = "none";
     }
 }
-
-function change(){
-    var ch = document.getElementById("signinModalBtn").innerHTML;
-    var x = ch.replace("Signin", "Welcome, " + $username );
-    document.getElementById("signinModalBtn") = x;
-}

@@ -130,7 +130,7 @@ if(isset($_POST['submit'])){
                                           </select>
                                        </p>
                                       <!-- <input type="number" name="admin_signin_pin" placeholder="PIN" required><br><br> -->
-                                      <button type="submit" name="submit"  class="signup-button" onclick="change()">Signin</button>
+                                      <button type="submit" name="submit"  class="signup-button">Signin</button>
                                     </form>
                                 </div>
                             </div>

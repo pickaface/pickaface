@@ -3,7 +3,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 $html = '
         <ul>
-        <li><a class="current" href="home.php">PickAFaceAndNick</a></li>
+        <li><a id="change_text" class="current" href="home.php">PickAFaceAndNick</a></li>
         <li><a class="" href="pick.php">Pick</a></li>
         <li><a class="" href="game.php">Game</a></li>
         <li><a class="" href="contact.php">Contact</a></li>

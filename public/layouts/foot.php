@@ -46,9 +46,11 @@
       </footer>
 
       <?php if(isset($alert_message)){ echo "<script>alert('" . $alert_message . "')</script>"; } ?>
-      <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pafanpopup.js";?>></script>
+
       <script src="../javascript/main.js"></script>
       <script  src="../javascript/signin.js"></script>
+      <!-- <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pafanpopup.js";?>></script> -->
+
     </div><!-- container end -->
 
     <!-- dropdown toggle -->
@@ -59,5 +61,8 @@
             });
         });
     </script>
+
+    <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."onloadscript.js";?>></script>
+
   </body>
 </html>

@@ -77,9 +77,14 @@ if(isset($_POST['submit'])){
     <meta charset="utf-8">
     <title>pick-a-face-and-nick</title>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+    <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."onloadstyle.css";?>>
     <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."user.png";?> type="image/x-icon">
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."mediaflex.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."master.css";?>>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131410677-1"></script> -->
@@ -102,7 +107,7 @@ if(isset($_POST['submit'])){
           <header>
               <nav>
                   <div class="toggle"><i class="fas fa-bars"></i></div>
-                  <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo.gif" alt="logo..." width="30" height="40"></a></div>
+                  <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="50" height="55"></a></div>
                   <div class="menu">
                       <?php echo $html;?>
                   </div>
@@ -141,6 +146,72 @@ if(isset($_POST['submit'])){
                   </div>
               </nav>
           </header>
+
+          <!-- Onload function  -->
+          <div id="overlay_face" class="onloadClass">
+          <div class="onload_content" onload="onloadFunction">
+            <div class="onload_header">
+              <span id="close" class="onload_close">&times;</span>
+              <h2>Pick a Face</h2>
+            </div>
+
+          <div class="onload_body">
+<!-- slider -->
+              <div class="slideshow-container" style="display:grid">
+                <div id="mySlides" class="mySlides fade">
+                 <div id="face" class="box"><img src="../assets/vitalimages/male_1.png" style="width:100%"></div>
+                  <div id="face" class="box"><img src="../assets/vitalimages/female_1.png" style="width:100%"></div>
+                  <div id="face" class="box"><img src="../assets/vitalimages/male_2.png" style="width:100%"></div>
+                  <div id="face" class="box"><img src="../assets/vitalimages/female_2.png" style="width:100%"></div>
+                  <div id="face" class="box"><img src="../assets/vitalimages/male_1.png" style="width:100%"></div>
+                </div>
+
+            </div>
+
+            <br>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <div class="onload_footer">
+              <h2>Footer</h3>
+            </div>
+
+            </div>
+            </div>
+
+            <!-- Pick a Nick -->
+            <div id="overlay_nick" class="overlayNick">
+            <div id="content" class="onload_content">
+            <div class="onload_header">
+              <span id="close" class="nick_close">&times;</span>
+              <h2>Pick a Nick</h2>
+            </div>
+
+            <div class="onload_body">
+
+                <div class="form">
+                  <form id="form" action="index.php" method="post">
+                    Pick a Name: <input type="text" id="name" placeholder="Nick...">
+                    <input id="button1" type="button" value="submit">
+                    <!-- <button id="button" type="button">Pick</button> -->
+                  </form>
+                </div>
+            </div>
+
+            <div class="onload_footer">
+              <h2>Footer</h3>
+            </div>
+            </div>
+
+          <!-- Onload function -->
       </div>
 
       <!-- <div class="visible-contents">

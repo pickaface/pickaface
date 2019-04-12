@@ -1,0 +1,199 @@
+.onloadClass {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;  /* enable scrool bar if needs */
+  background-color: rgb(90, 90, 90, 0.5);
+}
+
+.overlayNick{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;  /* enable scrool bar if needs */
+  background-color: rgb(90, 90, 90, 0.5);
+}
+
+.onload_content {
+  background-color: var(--primary);
+  box-shadow: var(--shadow);
+  /* background-color: lightgrey; */
+  box-shadow: blue;
+  margin: 20% auto; /* bottom, left and right */
+  width: 60%; /* responsive to the screen size */
+  animation-name: modalLanding;
+  animation-duration: 1s;
+}
+
+.onload_close {
+  color: var(--dark);
+  /* color: black; */
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nick_close {
+  color: var(--dark);
+  /* color: black; */
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.onload_close:hover, .onload_close:focus {
+  color: var(--primary);
+  /* color: white; */
+}
+
+.onload_header, .onload_footer {
+  background: var(--golden);
+  /* background: green; */
+  padding: 10px 20px;
+  color: var(--primary);
+  /* color: white; */
+}
+
+.onload_body {
+  padding: 50px 0;
+}
+
+.onload_header h2, .onload_footer h2 {
+  margin: 0;
+}
+
+/* Slider CSS */
+
+
+*, *::before, *::after {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+
+.mySlides {
+
+  height: 100%;
+  position: relative;
+  top: 0;
+
+
+}
+
+.box{
+  float:left;
+  /* margin-left: 90px; */
+  width: 15%;
+  padding: 0;
+  margin-right: 0;
+  margin: 0 80px 0 0;
+  /* background-color: Highlight; */
+  border-radius: 45%;
+  /* filter: alpha(opacity=20); */
+}
+
+
+img {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+img:hover{
+  background-color: Highlight;           /* Yellow Highlight On Hover */
+  /* background-size: 20px; */
+  border-radius: 45%;
+  filter: alpha(opacity=20);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  margin-left: 60px;
+  display:grid;
+ /* grid-template-columns : repeat(4, 1fr); */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  /* position: absolute; */
+  position:absolute;
+  top: 70%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 20%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 12px 12px;
+  /* position: absolute; */
+  bottom: 2px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

@@ -5,7 +5,7 @@ $html = '
         <ul>
         <li><a id="change_text" class="current" href="home.php">PickAFaceAndNick</a></li>
         <li><a class="" href="pick.php">Pick</a></li>
-        <li><a class="" href="game.php">Game</a></li>
+        <li><div class="dropdown"><a href="#" class="dropdownBtn">Game</a><div class="dropdown-content"><a id="gameMini" href="#">Tick Tac Toe</a><a href="#">Chess</a></div></div></li>
         <li><a class="" href="contact.php">Contact</a></li>
         <li><a class="" href="signin.php" id="signin_for_php">Signin</a></li>
         </ul>

@@ -77,13 +77,12 @@ if(isset($_POST['submit'])){
     <meta charset="utf-8">
     <title>pick-a-face-and-nick</title>
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+    <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."gametic.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."onloadstyle.css";?>>
+
     <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."user.png";?> type="image/x-icon">
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."mediaflex.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."master.css";?>>
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -95,6 +94,16 @@ if(isset($_POST['submit'])){
       // gtag('config', 'UA-131410677-1');
     </script>
     <!-- End Global site tag (gtag.js) - Google Analytics -->
+    <style>
+      canvas {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
   </head>
 
   <body <?php echo (isset($session_message) ? 'onload="sessionAlert()"' : null );?> >
@@ -157,7 +166,7 @@ if(isset($_POST['submit'])){
 
           <div class="onload_body">
 <!-- slider -->
-              <div class="slideshow-container" style="display:grid">
+              <div class="slideshow-container" style="display:flex">
                 <div id="mySlides" class="mySlides fade">
                  <div id="face" class="box"><img src="../assets/vitalimages/male_1.png" style="width:100%"></div>
                   <div id="face" class="box"><img src="../assets/vitalimages/female_1.png" style="width:100%"></div>
@@ -175,6 +184,7 @@ if(isset($_POST['submit'])){
               <span class="dot" onclick="currentSlide(3)"></span>
               <span class="dot" onclick="currentSlide(3)"></span>
             </div>
+
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -213,6 +223,104 @@ if(isset($_POST['submit'])){
 
           <!-- Onload function -->
       </div>
+
+
+      <!-- Game Overlay starts  -->
+      <div id="TickTacToe" >
+        <!-- <div id="gameOverlay">
+        <script>
+
+            var canvas, ctx, state, mouse = {x:0, y:0};
+
+            window.onload = function main() {
+
+            	canvas = document.createElement("canvas");
+            	canvas.width = canvas.height = 3*120 + 20;
+            	ctx = canvas.getContext("2d");
+
+            	state = new StateManager();
+            	state.add(new MenuState("menu"), new GameState("game"), new AboutState("about"));
+            	state.set("menu");
+
+            	document.body.appendChild(canvas);
+
+            	canvas.addEventListener("mousemove", mouseMove, false);
+
+            	init();
+            	tick();
+            }
+
+            function init() {
+            	state.get("game").init(ONE_PLAYER);
+            }
+
+            function tick() {
+            	window.requestAnimationFrame(tick);
+
+            	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            	state.tick(ctx);
+            }
+
+            function mouseMove(evt) {
+            	var el = evt.target;
+            	var ox = oy = 0;
+            	do {
+            		ox += el.offsetLeft;
+            		oy += el.offsetTop;
+            	} while (el.parentOffset)
+
+            	mouse.x = evt.clientX - ox;
+            	mouse.y = evt.clientY - oy;
+            }
+            </script>
+            </div> -->
+      <div id="gameOverlay">
+        <div class="">
+          <div id="gameheader">
+        <h1 align="center">TIC TAC TOE</h1>
+      </div>
+        <br><br><br><br>
+
+          <table>
+            <tr>
+              <td><input type="button" id="1" onclick="xoo(1)" value=""/></td>
+              <td><input type="button" id="2" onclick="xoo(2)" value=""/></td>
+              <td><input type="button" id="3" onclick="xoo(3)" value=""/></td>
+            </tr>
+            <tr>
+              <td><input type="button" id="4" onclick="xoo(4)" value=""/></td>
+              <td><input type="button" id="5" onclick="xoo(5)" value=""/></td>
+              <td><input type="button" id="6" onclick="xoo(6)" value=""/></td>
+            </tr>
+            <tr>
+              <td><input type="button" id="7" onclick="xoo(7)" value=""/></td>
+              <td><input type="button" id="8" onclick="xoo(8)" value=""/></td>
+              <td><input type="button" id="9" onclick="xoo(9)" value=""/></td>
+            </tr>
+
+          </table>
+
+          <button id="resetButton" onclick="resetToDefault()">Reset</button> <br><br>
+          <a id="inviteButton" href="../../includes/sms/sendsms.php">Invite Friends</a>
+          <!-- <button id="inviteButton" href="../public/layouts/invite.php">Invite Friends</button> -->
+
+          <section align="center" id="gamepopup">
+            <p id="text" align="center">text</p>
+            <button id="popupbutton" onclick="resetToDefault()">Ok</button>
+          </section>
+        </div>
+        <div id="player1Detail">
+          <!-- <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="80" height="75"></a></div> -->
+          <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="80" height="75"></a>
+          <a href="#"><h3>PickAFaceAndNick</h3></a>
+      </div>
+
+      <section id="overlay_game"></section>
+      </div>
+    </div>
+
+      <!-- Game Overlay ends -->
 
       <!-- <div class="visible-contents">
         <header>

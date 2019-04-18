@@ -12,7 +12,7 @@ defined('P_ROOT') ? null : define('P_ROOT', dirname(dirname(dirname(__FILE__))))
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once P_ROOT.DS.'email'.DS.'vendor'.DS.'autoload.php';//Load Composer's autoloader
+// require_once P_ROOT.DS.'email'.DS.'vendor'.DS.'autoload.php';//Load Composer's autoloader
 
 function send_my_mail($email , $subject , $body_text){
   $mail = new PHPMailer(true);

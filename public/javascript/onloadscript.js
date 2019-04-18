@@ -28,7 +28,6 @@ for (i = 0; i < document.getElementsByClassName('box').length; i++) {
     function replaceWithImage(){
       var img = document.getElementById('logo');
       img.src = "../assets/vitalimages/male_1.png";
-
     }
 
   }else if (i == 1) {
@@ -110,11 +109,10 @@ function showSlides(n) {
     for (var i = 0; i < document.getElementsByClassName("box").length; i++) {
       // for (var y = i%5; y < document.getElementsByClassName("box").length; y++) {
 
-      if (i<=i%4) {
-        // slides[i%3].style.display = "none";
+      if (i<4) {
         slides[i].style.display = "block";
-
-      }else if (i>i%4) {
+        slides[4].style.display = "none";
+      }else if (i>=4) {
         slides[i%4].style.display = "none";
         slides[i].style.display = "block";
       }

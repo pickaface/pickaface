@@ -1,3 +1,5 @@
+
+
 // get modal element
 var modal = document.getElementById('myModal');
 // get open modal button
@@ -24,6 +26,7 @@ function closeModal(){
 function closeOutside(e){
     if(e.target == modal){
         modal.style.display = 'none';
+  
     }
 }
 

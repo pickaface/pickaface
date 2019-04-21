@@ -22,11 +22,13 @@
   box-shadow:0px 5px 5px rgba(0,0,0,0.3);
   z-index:6;
 }
+
 #gameOverlay h1{
   margin: 12px;
   font-weight:300;
   color: white;
-}
+
+
 
 #gameOverlay table {
    background-color:#00aaaa;

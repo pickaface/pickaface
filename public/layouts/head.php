@@ -65,7 +65,11 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."gametic.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."onloadstyle.css";?>>
 
+<<<<<<< HEAD
     <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."fav.png";?> type="image/x-icon">
+=======
+    <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."user.png";?> type="image/x-icon">
+>>>>>>> 37da1ad9408c2428773974d5c40e39a948099767
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."mediaflex.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."master.css";?>>
 
@@ -212,7 +216,58 @@ if(isset($_POST['submit'])){
 
       <!-- Game Overlay starts  -->
       <div id="TickTacToe" >
+<<<<<<< HEAD
 
+=======
+        <!-- <div id="gameOverlay">
+        <script>
+
+            var canvas, ctx, state, mouse = {x:0, y:0};
+
+            window.onload = function main() {
+
+            	canvas = document.createElement("canvas");
+            	canvas.width = canvas.height = 3*120 + 20;
+            	ctx = canvas.getContext("2d");
+
+            	state = new StateManager();
+            	state.add(new MenuState("menu"), new GameState("game"), new AboutState("about"));
+            	state.set("menu");
+
+            	document.body.appendChild(canvas);
+
+            	canvas.addEventListener("mousemove", mouseMove, false);
+
+            	init();
+            	tick();
+            }
+
+            function init() {
+            	state.get("game").init(ONE_PLAYER);
+            }
+
+            function tick() {
+            	window.requestAnimationFrame(tick);
+
+            	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            	state.tick(ctx);
+            }
+
+            function mouseMove(evt) {
+            	var el = evt.target;
+            	var ox = oy = 0;
+            	do {
+            		ox += el.offsetLeft;
+            		oy += el.offsetTop;
+            	} while (el.parentOffset)
+
+            	mouse.x = evt.clientX - ox;
+            	mouse.y = evt.clientY - oy;
+            }
+            </script>
+            </div> -->
+>>>>>>> 37da1ad9408c2428773974d5c40e39a948099767
       <div id="gameOverlay">
         <div class="">
           <div id="gameheader">
@@ -239,6 +294,7 @@ if(isset($_POST['submit'])){
 
           </table>
 
+<<<<<<< HEAD
           <div id="chatting">
 
           		<div id="AvailablePlayers">
@@ -252,6 +308,8 @@ if(isset($_POST['submit'])){
         		<textarea id="ChatText" name="ChatText"></textarea>
         	</div>
           </div>
+=======
+>>>>>>> 37da1ad9408c2428773974d5c40e39a948099767
           <button id="resetButton" onclick="resetToDefault()">Reset</button> <br><br>
           <a id="inviteButton" href="../../includes/sms/sendsms.php">Invite Friends</a>
           <!-- <button id="inviteButton" href="../public/layouts/invite.php">Invite Friends</button> -->
@@ -263,9 +321,14 @@ if(isset($_POST['submit'])){
         </div>
         <div id="player1Detail">
           <!-- <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="80" height="75"></a></div> -->
+<<<<<<< HEAD
           <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="player1pick" alt="logo..." width="80" height="75"></a>
 
             <span style="color:green"><a id="player1nick" href="#"><h3>PLayer 1</h3></a></span>
+=======
+          <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="80" height="75"></a>
+          <a href="#"><h3>PickAFaceAndNick</h3></a>
+>>>>>>> 37da1ad9408c2428773974d5c40e39a948099767
       </div>
 
       <section id="overlay_game"></section>

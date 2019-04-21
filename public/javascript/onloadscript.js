@@ -7,9 +7,11 @@ button.addEventListener('click', buttonReplace);
 function buttonReplace(){
 
   var str = document.getElementById('change_text');
+  var str1 = document.getElementById('player1nick');
   var name = document.getElementById('name');
 
   str.innerHTML = name.value;
+  str1.innerHTML = name.value;
   overlayNick.style.display = 'none';
 
 }
@@ -27,7 +29,12 @@ for (i = 0; i < document.getElementsByClassName('box').length; i++) {
     onClickImage.addEventListener('click', openNick);
     function replaceWithImage(){
       var img = document.getElementById('logo');
+      var img1 =  document.getElementById('player1pick');
       img.src = "../assets/vitalimages/male_1.png";
+<<<<<<< HEAD
+      img1.src = "../assets/vitalimages/male_1.png";
+=======
+>>>>>>> 37da1ad9408c2428773974d5c40e39a948099767
     }
 
   }else if (i == 1) {
@@ -35,28 +42,36 @@ for (i = 0; i < document.getElementsByClassName('box').length; i++) {
       onClickImage.addEventListener('click', openNick);
       function replaceWithImage(){
         var img = document.getElementById('logo');
+        var img1 =  document.getElementById('player1pick');
         img.src = "../assets/vitalimages/female_1.png";
+        img1.src = "../assets/vitalimages/female_1.png";
       }
   }else if (i == 2) {
       onClickImage.addEventListener('click', replaceWithImage);
       onClickImage.addEventListener('click', openNick);
       function replaceWithImage(){
         var img = document.getElementById('logo');
+        var img1 =  document.getElementById('player1pick');
         img.src = "../assets/vitalimages/male_2.png";
+        img1.src = "../assets/vitalimages/male_2.png";
       }
   }else if (i == 3) {
       onClickImage.addEventListener('click', replaceWithImage);
       onClickImage.addEventListener('click', openNick);
       function replaceWithImage(){
         var img = document.getElementById('logo');
+        var img1 =  document.getElementById('player1pick');
         img.src = "../assets/vitalimages/male_2.png";
+        img1.src = "../assets/vitalimages/male_2.png";
       }
   }else {
     onClickImage.addEventListener('click', replaceWithImage);
     onClickImage.addEventListener('click', openNick);
     function replaceWithImage(){
       var img = document.getElementById('logo');
+      var img1 =  document.getElementById('player1pick');
       img.src = "../assets/vitalimages/logo.png";
+      img1.src = "../assets/vitalimages/logo.png";
     }
   }
 }

@@ -26,7 +26,7 @@ function closeModal(){
 function closeOutside(e){
     if(e.target == modal){
         modal.style.display = 'none';
-  
+
     }
 }
 
@@ -82,8 +82,6 @@ arrowRight.addEventListener('click', function(){
 
 startSlide();
 
-
-// search bar to filter bottom categories
 let filterInput = document.getElementById('filterInput');
 filterInput.addEventListener('keyup', filterNames);
 

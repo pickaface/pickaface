@@ -22,11 +22,13 @@
   box-shadow:0px 5px 5px rgba(0,0,0,0.3);
   z-index:6;
 }
-#gameOverlay h1 {
+
+#gameOverlay h1{
   margin: 12px;
   font-weight:300;
-  color:#FFFFFF;
-}
+  color: white;
+
+
 
 #gameOverlay table {
    background-color:#00aaaa;
@@ -103,7 +105,7 @@
   /* color:#FFFFFF; */
   font-size:100%;
   }
-  
+
 #overlay_game {
    position:fixed;
    top:0px;
@@ -113,4 +115,12 @@
    background-color:#000000;
    opacity:0.5;
    visibility:hidden;
+}
+
+#chatting{
+  float: right;
+}
+#ChatBig{
+  margin-right: 80px;
+  margin-top: -300px;
 }

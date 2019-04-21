@@ -78,7 +78,6 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 .mySlides {
   display: flex;
-  height: 100%;
   position: relative;
   top: 0;
 
@@ -122,8 +121,7 @@ img:hover{
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  /* position: absolute; */
-  position:absolute;
+  position: absolute;
   top: 70%;
   width: auto;
   padding: 16px;

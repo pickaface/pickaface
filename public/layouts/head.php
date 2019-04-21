@@ -16,10 +16,18 @@
   }
 
  require_once 'navbar.php';
+
+ //
+ // if ($_SESSION['gameid']!=0){
+ //   $user->DeleteGame($_SESSION['gameid']);
+ //   $_SESSION['gameid']="";
+ // }
+
 ?>
      <!-- Code for type of Signin -->
 
 <?php
+
 
 if(isset($_POST['submit'])){
 
@@ -27,29 +35,6 @@ if(isset($_POST['submit'])){
   $username=$_POST['username'];
   $password=$_POST['password'];
   $type=$_POST['type'];
-
-  // verify_email_and_instantiate($email);
-  // User::verify_password_and_instantiate($password);
-
-  // $con=mysqli_connect("localhost","pafanuser",$db_password,"pafandb");
-  // $query="SELECT * FROM login WHERE username='$username' AND password='$password' AND type='$type'";
-  //
-  // $result=mysqli_query($con, $query);
-  //
-  // while ($row=mysqli_fetch_assoc($result)) {
-  //     // var_dump($row);
-  //     // exit();
-  //     if($row['username']==$username && $row['password']==$password && $row['type']=='Admin'){
-  //         // echo '..'.DS."admin".DS."admin.php";
-  //          header("Location: ../admin/admin.php");
-  //   }elseif ($row['username']==$username && $row['password']==$password && $row['type']=='User') {
-  //         echo '..'.DS."frontend".DS."home.php";
-
-  //   }
-  // }
-  //
-  // }
-
 
   $query = "SELECT * FROM login WHERE username='$username' AND password='$password' AND type='$type'";
   $result = $db->my_query($query);
@@ -80,7 +65,11 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."gametic.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."onloadstyle.css";?>>
 
+
+    <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."fav.png";?> type="image/x-icon">
+
     <link rel="shortcut icon" href=<?php echo "..".DS."assets".DS."vitalimages".DS."user.png";?> type="image/x-icon">
+
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."mediaflex.css";?>>
     <link rel="stylesheet" href=<?php echo "..".DS."styles".DS."master.css";?>>
 
@@ -116,7 +105,7 @@ if(isset($_POST['submit'])){
           <header>
               <nav>
                   <div class="toggle"><i class="fas fa-bars"></i></div>
-                  <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="50" height="55"></a></div>
+                  <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo10.png" id="logo" alt="logo..." width="50" height="55"></a></div>
                   <div class="menu">
                       <?php echo $html;?>
                   </div>
@@ -227,54 +216,7 @@ if(isset($_POST['submit'])){
 
       <!-- Game Overlay starts  -->
       <div id="TickTacToe" >
-        <!-- <div id="gameOverlay">
-        <script>
 
-            var canvas, ctx, state, mouse = {x:0, y:0};
-
-            window.onload = function main() {
-
-            	canvas = document.createElement("canvas");
-            	canvas.width = canvas.height = 3*120 + 20;
-            	ctx = canvas.getContext("2d");
-
-            	state = new StateManager();
-            	state.add(new MenuState("menu"), new GameState("game"), new AboutState("about"));
-            	state.set("menu");
-
-            	document.body.appendChild(canvas);
-
-            	canvas.addEventListener("mousemove", mouseMove, false);
-
-            	init();
-            	tick();
-            }
-
-            function init() {
-            	state.get("game").init(ONE_PLAYER);
-            }
-
-            function tick() {
-            	window.requestAnimationFrame(tick);
-
-            	ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            	state.tick(ctx);
-            }
-
-            function mouseMove(evt) {
-            	var el = evt.target;
-            	var ox = oy = 0;
-            	do {
-            		ox += el.offsetLeft;
-            		oy += el.offsetTop;
-            	} while (el.parentOffset)
-
-            	mouse.x = evt.clientX - ox;
-            	mouse.y = evt.clientY - oy;
-            }
-            </script>
-            </div> -->
       <div id="gameOverlay">
         <div class="">
           <div id="gameheader">
@@ -301,6 +243,20 @@ if(isset($_POST['submit'])){
 
           </table>
 
+          <div id="chatting">
+
+          		<div id="AvailablePlayers">
+          		</div>
+
+          	<div id="ChatMessages">
+          </div>
+
+          <div id="ChatBig">
+        		<span style="color:white">Chat</span><br/>
+        		<textarea id="ChatText" name="ChatText"></textarea>
+        	</div>
+          </div>
+
           <button id="resetButton" onclick="resetToDefault()">Reset</button> <br><br>
           <a id="inviteButton" href="../../includes/sms/sendsms.php">Invite Friends</a>
           <!-- <button id="inviteButton" href="../public/layouts/invite.php">Invite Friends</button> -->
@@ -311,9 +267,9 @@ if(isset($_POST['submit'])){
           </section>
         </div>
         <div id="player1Detail">
-          <!-- <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="80" height="75"></a></div> -->
           <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="80" height="75"></a>
           <a href="#"><h3>PickAFaceAndNick</h3></a>
+
       </div>
 
       <section id="overlay_game"></section>

@@ -83,19 +83,17 @@ function buttonsdeactivate() {
 function popupdemonstrate(winner) {
       //deaktiviert alle Buttons
       buttonsdeactivate();
-<<<<<<< HEAD
+
       var win = winner;
       //ersetzt Text
       var popuptext = document.getElementById("text");
       popuptext.innerHTML = winner + " wins.";
       console.log(win);
       //window.location.href="result.php?name="+popuptext;
-=======
 
-      //ersetzt Text
       popuptext = document.getElementById("text");
       popuptext.innerHTML = winner + " wins.";
->>>>>>> 37da1ad9408c2428773974d5c40e39a948099767
+
 
       //macht Popup sichtbar
       var pop = document.getElementById("gamepopup");

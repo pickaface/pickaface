@@ -267,11 +267,6 @@ if(isset($_POST['submit'])){
           </section>
         </div>
         <div id="player1Detail">
-
-          <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="player1pick" alt="logo..." width="80" height="75"></a>
-
-            <span style="color:green"><a id="player1nick" href="#"><h3>PLayer 1</h3></a></span>
-
           <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="logo" alt="logo..." width="80" height="75"></a>
           <a href="#"><h3>PickAFaceAndNick</h3></a>
 

@@ -27,11 +27,10 @@
   margin: 12px;
   font-weight:300;
   color: white;
+}
 
-
-
-#gameOverlay table {
-   background-color:#00aaaa;
+table{
+   background-color: #00aaaa;
    margin: 100px 0 0 350px;
    width:50%;
 }

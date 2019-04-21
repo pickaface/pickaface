@@ -31,10 +31,8 @@ for (i = 0; i < document.getElementsByClassName('box').length; i++) {
       var img = document.getElementById('logo');
       var img1 =  document.getElementById('player1pick');
       img.src = "../assets/vitalimages/male_1.png";
-<<<<<<< HEAD
       img1.src = "../assets/vitalimages/male_1.png";
-=======
->>>>>>> 37da1ad9408c2428773974d5c40e39a948099767
+
     }
 
   }else if (i == 1) {

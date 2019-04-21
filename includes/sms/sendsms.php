@@ -12,7 +12,7 @@ if(isset($_POST['mobile']) && isset($_POST['msg'])) {
     $client = new Client($sid, $token);
     $message = $client->messages->create(
         $_POST['mobile'], array(
-              'from' => '+14155490399',
+              'from' => '+13612283190',
               'body' => $_POST['msg']
         )
     );
@@ -21,14 +21,12 @@ if(isset($_POST['mobile']) && isset($_POST['msg'])) {
       echo "Message Sent!";
     }
   } catch (\Exception $e) {
-        echo $e->getMessge();
+        echo $e->getMessage();
   }
-
-
 }
  ?>
 
- <h2>Sending sms using twilio API </h2>
+ <h2> Send SMS to play Game </h2>
 
  <form action="" method="post">
    Enter Mobile: <br><br>

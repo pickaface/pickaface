@@ -1,3 +1,5 @@
+
+
 // get modal element
 var modal = document.getElementById('myModal');
 // get open modal button
@@ -24,6 +26,7 @@ function closeModal(){
 function closeOutside(e){
     if(e.target == modal){
         modal.style.display = 'none';
+
     }
 }
 
@@ -81,25 +84,25 @@ startSlide();
 
 
 // search bar to filter bottom categories
-let filterInput = document.getElementById('filterInput');
-filterInput.addEventListener('keyup', filterNames);
-
-function filterNames(){
-    // get value of input
-    let filterValue = document.getElementById('filterInput').value.toUpperCase();
-
-    // get filter items
-    let filter = document.getElementById('filter');
-    let item = filter.querySelectorAll('.filter-item');
-
-    // loop through all items
-    for(let i = 0; i < item.length; i++){
-        let a = item[i].getElementsByTagName('a')[0];
-        // if matched
-        if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
-            item[i].style.display = '';
-        } else {
-            item[i].style.display = 'none';
-        }
-    }
-}
+// let filterInput = document.getElementById('filterInput');
+// filterInput.addEventListener('keyup', filterNames());
+//
+// function filterNames(){
+//     // get value of input
+//     let filterValue = document.getElementById('filterInput').value.toUpperCase();
+//
+//     // get filter items
+//     let filter = document.getElementById('filter');
+//     let item = filter.querySelectorAll('.filter-item');
+//
+//     // loop through all items
+//     for(let i = 0; i < item.length; i++){
+//         let a = item[i].getElementsByTagName('a')[0];
+//         // if matched
+//         if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+//             item[i].style.display = '';
+//         } else {
+//             item[i].style.display = 'none';
+//         }
+//     }
+// }

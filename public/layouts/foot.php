@@ -46,9 +46,10 @@
       </footer>
 
       <?php if(isset($alert_message)){ echo "<script>alert('" . $alert_message . "')</script>"; } ?>
-
+      <script src="../javascript/gameticscript.js"></script>
       <script src="../javascript/main.js"></script>
       <script  src="../javascript/signin.js"></script>
+
       <!-- <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."pafanpopup.js";?>></script> -->
 
     </div><!-- container end -->
@@ -62,7 +63,13 @@
         });
     </script>
 
-    <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."onloadscript.js";?>></script>
+
+      <script src="../javascript/game.js"></script>
+     <script src="../javascript/state.js"></script>
+     <script src="../javascript/availablePlayers.js"></script>
+     <script src="../javascript/game.js"></script>
+     <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."onloadscript.js";?>></script>
+     <script src="../javascript/addgamepopup.js"></script>
 
   </body>
 </html>

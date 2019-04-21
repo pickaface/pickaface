@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2019 at 07:38 PM
+-- Generation Time: Apr 20, 2019 at 11:19 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `pafandb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE `chat` (
+  `chatid` int(11) NOT NULL,
+  `chatuserid` int(11) NOT NULL,
+  `chattext` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `chatgameid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -50,7 +63,7 @@ INSERT INTO `dummy` (`id`, `dummy1`, `dummy2`) VALUES
 --
 
 CREATE TABLE `games` (
-  `id` int(11) NOT NULL,
+  `gameid` int(11) NOT NULL,
   `category` varchar(64) COLLATE utf8_bin NOT NULL,
   `game_name` varchar(64) COLLATE utf8_bin NOT NULL,
   `game_description` varchar(2048) COLLATE utf8_bin NOT NULL,
@@ -93,9 +106,29 @@ INSERT INTO `login` (`id`, `email`, `username`, `password`, `type`) VALUES
 (1, 'phani.sidhanthi03@gmail.com', 'phani', 'phani', 'Admin'),
 (2, 'john.doe@gmail.com', 'john', 'doe', 'User');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `userid` int(11) NOT NULL,
+  `usergameid` int(11) NOT NULL,
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `userpassword` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `usermail` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`chatid`);
 
 --
 -- Indexes for table `dummy`
@@ -116,8 +149,20 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`userid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `chatid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `dummy`
@@ -136,6 +181,12 @@ ALTER TABLE `games`
 --
 ALTER TABLE `login`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -69,8 +69,8 @@
     <center>
       <h1>Hello, Welcome Admin!!</h1>
     </center>
-    <button type="button" id="gamebtn" style="width:125px"> Add a Game</button>
-      <div id="Modal" class="modal">
+    <button type="button" id="gamebtn10" style="width:125px"> Add a Game</button>
+      <div id="Modal10" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h4>Add a Game Form</h4>

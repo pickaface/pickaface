@@ -4,7 +4,7 @@
  */
 class Game extends Setter{
   protected $_attributes = array(
-    "gameid"=> 0,
+    'id'=> 0,
     'category' => "nocategory",
     'game_name' => "NGN",
     'game_description' => "NGD",

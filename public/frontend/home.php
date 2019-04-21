@@ -8,11 +8,11 @@
         <div class="showcase">
             <div id="arrow-left" class="arrow"></div>
             <div id="slider">
-                <div class="slide slide1">
+                <div id="slide1" class="slide slide1">
                     <div class="slide-content">
-                        <h1>I am desert</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit culpa soluta corrupti consequatur dolorem praesentium impedit dolorum vitae placeat quis!</p>
-                        <a href="#" class="btn">Play Desert</a>
+                        <h1><strong>Tick Tac Toe</strong></h1>
+                        <p>Tic-tac-toe (American English), noughts and crosses (British English), or Xs and Os is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</p>
+                        <a href="#" id="desert" class="btn">Start...</a>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@
 
     <!-- info -->
     <section class="info">
-        <img src="../assets/vitalimages/wheat.jpg" alt="loading...">
+        <img src="../assets/vitalimages/games.gif" height="500" width="500" alt="loading...">
         <div>
             <h2>Pick Face Nick Game</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo soluta, temporibus sed iusto at beatae unde recusandae natus labore cupiditate voluptates doloribus assumenda sapiente, excepturi rem distinctio cumque sit quos?</p>
@@ -107,51 +107,51 @@
     <section class="portfolio">
         <div id="filter" class="filter-container">
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x200" alt="loading...">
+                <img src="../assets/vitalimages/chess.jpg" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Action</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x201" alt="loading...">
+                <img src="../assets/vitalimages/tick_tac_toe.png" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Race</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x202" alt="loading...">
+                <img src="../assets/vitalimages/ace.png" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Puzzle</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x203" alt="loading...">
+                <img src="../assets/vitalimages/dice.jpg" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Race</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x204" alt="loading...">
+                <img src="../assets/vitalimages/mahjong.png" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Action</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x205" alt="loading...">
+                <img src="../assets/vitalimages/rummy.jpeg" height="200" width="200"  alt="loading...">
                 <a class="game-category" href="#">Puzzle</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x206" alt="loading...">
+                <img src="../assets/vitalimages/suduko.jpg" height="200" width="200"  alt="loading...">
                 <a class="game-category" href="#">Puzzle</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x207" alt="loading...">
+                <img src="../assets/vitalimages/scrabble.jpg" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Race</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x208" alt="loading...">
+                <img src="../assets/vitalimages/mario.jpg" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Action</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x209" alt="loading...">
+                <img src="../assets/vitalimages/zombie.jpg" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Action</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x210" alt="loading...">
+                <img src="../assets/vitalimages/cars.jpg" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Puzzle</a>
             </div>
             <div class="filter-item">
-                <img src="https://source.unsplash.com/random/200x211" alt="loading...">
+                <img src="../assets/vitalimages/z.jpg" height="200" width="200" alt="loading...">
                 <a class="game-category" href="#">Race</a>
             </div>
         </div>

@@ -2,12 +2,12 @@
 /**
  *
  */
-abstract class Chat extends Setter{
+ abstract class Chat extends Setter{
   protected $_attributes = array(
     "chatid" => 0,
     "chatuserid" => 0,
     "chattext" => "NUN",
-    "chattextgameid" => 0
+    "chatgameid" => 0
   );
 
   ///////////////////////setters beyond this line///////////////////////////
@@ -37,9 +37,9 @@ abstract class Chat extends Setter{
     }
   }
 
-  protected function _set_chattextgameid($chattextgameid){
-    if($chattextgameid == 0 || filter_var($chattextgameid, FILTER_VALIDATE_INT)){
-      $this->_attributes["chattextgameid"] = $chattextgameid;
+  protected function _set_chatgameid($chatgameid){
+    if($chatgameid == 0 || filter_var($chatgameid, FILTER_VALIDATE_INT)){
+      $this->_attributes["chatgameid"] = $chatgameid;
     }else{
       throw new Exception("Not a valid chatuserid");
     }
@@ -54,19 +54,19 @@ public function InsertChatMessage(){
   VALUES(:chatuserid,:chatgameid,:chattext)");
 
   $chatInsert->execute(array(
-  'chatuserid'=>$this->getchatuserid(),
-  'chatgameid'=>$this->getchatgameid(),
-  'chattext'=>$this->getchattext()
+  'chatuserid'=>$this->chatuserid,
+  'chatgameid'=>$this->chatgameid,
+  'chattext'=>$this->chattext
   ));
 }
 
 public function DisplayMessage(){
 
-  $ChatReq=$db->prepare("SELECT * FROM chats WHERE chatgameid=:chatgameid ORDER BY ChatId DESC");
+  $ChatReq=$db->prepare("SELECT * FROM chats WHERE chatgameid=:chatgameid ORDER BY chatid DESC");
   $ChatReq->execute(array(
   'chatgameid'=>"0"
   ));
-  $chatIdForGame=$this->getchatgameid();
+  $chatIdForGame=$this->chatgameid;
   $existCount = $ChatReq->rowCount();
   if ($existCount == 0) { // evaluate the count
     return "Tom";
@@ -93,7 +93,7 @@ public function DisplayMessage(){
   }
   $GameOnReq=$db->prepare("SELECT * FROM user WHERE userid=:userid LIMIT 1");
   $GameOnReq->execute(array(
-  'userid'=>$this->getchatuserid()
+  'userid'=>$this->chatuserid
   ));
   $existCount = $GameOnReq->rowCount();
   if ($existCount > 0) {
@@ -116,7 +116,7 @@ public function DisplayMessagesInGame(){
 
   $ChatReq=$db->prepare("SELECT * FROM chat WHERE chatgameid=:chatgameid ORDER BY chatid DESC");
   $ChatReq->execute(array(
-  'chatgameid'=>$this->getchatgameid()
+  'chatgameid'=>$this->chatgameid
   ));
   $existCount = $ChatReq->rowCount();
   if ($existCount == 0) { // evaluate the count
@@ -138,7 +138,7 @@ public function DisplayMessagesInGame(){
   }
   $GameOnReq=$db->prepare("SELECT * FROM user WHERE userid=:userid LIMIT 1");
   $GameOnReq->execute(array(
-  'userid'=>$this->getchatuserid()
+  'userid'=>$this->chatuserid
   ));
   $existCount = $GameOnReq->rowCount();
 

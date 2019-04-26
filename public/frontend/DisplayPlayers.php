@@ -16,5 +16,5 @@
  	// require_once 'navbar.php';
 	// _set_username($_SESSION['username']);
 	// _set_userid($_SESSION['userid']);
-	DisplayAvailablePlayers();
+  User::DisplayAvailablePlayers();
 ?>

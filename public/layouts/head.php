@@ -102,7 +102,7 @@ if(isset($_POST['submit'])){
 
           <!-- <div id="dialog"><div id="dialog_head">Testing</div><div id="dialog_body"> <button type="button" name="button" onclick="ok()">OK</button> </div></div> -->
 
-          <header>
+          <header class="navbar">
               <nav>
                   <div class="toggle"><i class="fas fa-bars"></i></div>
                   <div class="logo"><a href="home.php"><img src="../assets/vitalimages/logo10.png" id="logo" alt="logo..." width="50" height="55"></a></div>
@@ -111,8 +111,8 @@ if(isset($_POST['submit'])){
                   </div>
                   <div class="user">
                       <ul>
-                          <input type="text" name="search" placeholder="Search">
-                          <i class="fas fa-search"></i>
+                          <input id="filterInput" type="text" name="search" placeholder="Search">
+                          <a href="#portfolio"><i class="fas fa-search"></i></a>
                           <li>
                             <input type="button" id="signinModalBtn" href="#" value="Signin" />
                           </li>
@@ -198,7 +198,7 @@ if(isset($_POST['submit'])){
 
                 <div class="form">
                   <form id="form" action="index.php" method="post">
-                    Pick a Name: <input type="text" id="name" placeholder="Nick...">
+                    Pick a Name: <input type="text" id="name" name="name1" placeholder="Nick...">
                     <input id="button1" type="button" value="submit">
                     <!-- <button id="button" type="button">Pick</button> -->
                   </form>
@@ -268,7 +268,7 @@ if(isset($_POST['submit'])){
         </div>
         <div id="player1Detail">
           <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="player1pick" alt="logo..." width="80" height="75"></a>
-          <a id="player1nick" href="#"><h3>PickAFaceAndNick</h3></a>
+          <a id="player1nick" href="#"><h3><?php echo "Welcome";$_SESSION['name1'] ?></h3></a>
 
       </div>
 

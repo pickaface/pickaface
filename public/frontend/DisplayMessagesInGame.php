@@ -10,8 +10,5 @@
 	//     exit();
 	// }
 
-
-	_set_chatuserid($_SESSION['userid']);
-  _set_chattext($_SESSION['gameid']);
-	DisplayMessagesInGame();
+	Chat::DisplayMessagesInGame();
 ?>

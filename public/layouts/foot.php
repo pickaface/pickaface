@@ -69,7 +69,7 @@
      <script src="../javascript/availablePlayers.js"></script>
      <script src="../javascript/game.js"></script>
      <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."onloadscript.js";?>></script>
-     <script src="../javascript/addgamepopup.js"></script>
+     <script defer src="../javascript/addgamepopup.js"></script>
 
     <script type="text/javascript" src=<?php echo "..".DS."javascript".DS."onloadscript.js";?>></script>
       <script src="../javascript/game.js"></script>

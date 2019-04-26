@@ -96,7 +96,7 @@ abstract class User extends Setter{
     }
   }
 
-  protected function _set_password($userpassword){
+  protected function _set_userpassword($userpassword){
     if(trim($userpassword) != ""){
       $this->_attributes["userpassword"] = password_hash(trim($userpassword), PASSWORD_DEFAULT);
     }else{
@@ -118,15 +118,12 @@ abstract class User extends Setter{
   $UserInsert=$db->prepare("INSERT INTO user (username,userpassword)
   VALUES (:username,:userpassword)");
 
-  $UserInsert->execute(array(
-  'username'=>$this->getusername(),
-  'userpassword'=>$this->getuserpassword()
-  ));
+  $UserInsert->execute();
 }
 
 
-public function DisplayAvailablePlayers(){
-
+public static function DisplayAvailablePlayers(){
+    global $db;
 		$UserReq=$db->query("SELECT * FROM user ORDER BY userid");
 		$existCount = $UserReq->rowCount();
 		if ($existCount == 0) { // evaluate the count

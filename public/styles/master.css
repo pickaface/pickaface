@@ -653,10 +653,25 @@ color: #d5d5d5;
 }
 /* End Overlay and Alertbox style */
 
-/* 
+/*
 #player1nick{
   font-size: 20px;
   margin-left: -50px;
   color: white;
   margin-top: -500px;
 } */
+
+
+/*  Chat box style*/
+#AvailablePlayers{font-size:19px;font-weight:normail;}
+
+#ChatMessages{position: absolute;
+	/* left: 250px;
+	top: 120px; */
+	}
+#ChatBig{position: absolute;
+	/* left: 250px;
+	top: 50px; */
+	}
+.UserNameS{color:#7CB9E8;;}
+.UserNameS:hover{text-decoration: underline;cursor: pointer;}

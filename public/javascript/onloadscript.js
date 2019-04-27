@@ -2,17 +2,37 @@
 
 var button = document.getElementById('button1');
 
-button.addEventListener('click', buttonReplace);
+button.addEventListener('click', ajax_post);
 
-function buttonReplace(){
+function ajax_post(){
+  //
+  // var str = document.getElementById('change_text');
+  // var str1 = document.getElementById('player1nick');
+  // var name = document.getElementById('name');
+  //
+  // str.innerHTML = name.value;
+  // str1.innerHTML = name.value;
+  // overlayNick.style.display = 'none';
+  var xhr = new XMLHttpRequest();
+  var url = "../common/ajax.php";
 
-  var str = document.getElementById('change_text');
-  var str1 = document.getElementById('player1nick');
-  var name = document.getElementById('name');
+  var out = document.getElementById('name').value;
 
-  str.innerHTML = name.value;
-  str1.innerHTML = name.value;
-  overlayNick.style.display = 'none';
+  var dis = "name="+out;
+  xhr.open("POST",url,true);
+  xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+  xhr.onreadystatechange = function() {
+        	    if(xhr.readyState == 4 && xhr.status == 200) {
+
+                var return_data = xhr.responseText;
+        			  document.getElementById("change_text").innerHTML = return_data;
+                overlayNick.style.display = 'none';
+        	    }
+            }
+   xhr.send(dis);
+   document.getElementById("change_text").innerHTML = "loading...";
+   overlayNick.style.display = 'none';
 
 }
 

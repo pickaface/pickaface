@@ -198,8 +198,8 @@ if(isset($_POST['submit'])){
 
                 <div class="form">
                   <form id="form" action="index.php" method="post">
-                    Pick a Name: <input type="text" id="name" name="name1" placeholder="Nick...">
-                    <input id="button1" type="button" value="submit">
+                    Pick a Name: <input type="text" id="name"  placeholder="Nick...">
+                    <input id="button1" type="button" value="Submit">
                     <!-- <button id="button" type="button">Pick</button> -->
                   </form>
                 </div>
@@ -268,7 +268,7 @@ if(isset($_POST['submit'])){
         </div>
         <div id="player1Detail">
           <a href="home.php"><img src="../assets/vitalimages/logo.gif" id="player1pick" alt="logo..." width="80" height="75"></a>
-          <a id="player1nick" href="#"><h3><?php echo "Welcome";$_SESSION['name1'] ?></h3></a>
+          <a id="player1nick" href="#"><h3><?php echo "Welcome"; ?></h3></a>
 
       </div>
 
